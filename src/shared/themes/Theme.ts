@@ -1,6 +1,6 @@
 export const theme = {
 	colors: {
-		background: '#f0f0f0',
+		background: '#f2f2f2',
 		paper: '#ffffff',
 		text: '#1E1E1E',
 		textPlaceholder: '#a1a1a1',
@@ -25,6 +25,13 @@ export const theme = {
 	}, 
 
 	shadows: {
-		default: '0 0 4 0 rgba(0, 0, 0, 0.15)',
-	},
+		default: {
+
+			shadowColor: '#000',
+			shadowOffset: { width: 0, height: 0 },
+			shadowOpacity: 0.25,
+			shadowRadius: 4,
+			elevation: 20,
+		}	
+	}
 };

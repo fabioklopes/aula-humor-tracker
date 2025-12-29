@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native"
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { theme } from "../themes/Theme"
 import React from "react"
 
@@ -6,8 +7,11 @@ interface IFooterProps	{
 	children: React.ReactNode;
 }
 export const Footer = ({ children }: IFooterProps) => {
+	
+	const insets = useSafeAreaInsets();
+
 	return (
-		<View style={styles.footerContainer}>
+		<View style={{...styles.footerContainer, paddingBottom: insets.bottom + 16}}>
 			{children}
 		</View>
 	)
@@ -15,10 +19,10 @@ export const Footer = ({ children }: IFooterProps) => {
 
 const styles = StyleSheet.create({
 	footerContainer: {
-		gap: 8,
 		padding: 16,
-		justifyContent: 'center',
-		alignItems: 'center',
-		flexDirection: 'row',
+		borderTopEndRadius: 24,
+		borderTopLeftRadius: 24,
+		backgroundColor: theme.colors.paper,
+		...theme.shadows.default,
 	},
-})
+});

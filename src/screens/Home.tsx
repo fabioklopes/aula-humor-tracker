@@ -3,6 +3,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Button, Text, View } from "react-native";
 import { TNavigationScreenProps } from "../Routes";
 import { Header } from "../shared/components/Header";
+import { Footer } from "../shared/components/Footer";
 
 
 export const HomePage = () => {
@@ -15,7 +16,10 @@ export const HomePage = () => {
 			/>
 
 			<View style={{ flex: 1 }} />
-			<Text style={{fontFamily: 'body'}}>HomePage</Text>
+
+			<Footer>
+				<Text style={{fontFamily: 'body'}}>HomePage</Text>
+			</Footer>
 		</>
 	);
 }
