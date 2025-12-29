@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { Button, Text } from "react-native";
+import { Button, Text, View } from "react-native";
 import { TNavigationScreenProps } from "../Routes";
 import { Header } from "../shared/components/Header";
 
@@ -10,19 +10,12 @@ export const HomePage = () => {
 
 	return (
 		<>
-
 			<Header 
 				name={undefined}
 			/>
 
-			<Button
-				title='Go to Details'
-				onPress={() => navigation.navigate('detail', { rate: 3 })}
-			/>
-			<Button
-				title='Go to Set User Name'
-				onPress={() => navigation.navigate('setUsername')}
-			/>
+			<View style={{ flex: 1 }} />
+			<Text style={{fontFamily: 'body'}}>HomePage</Text>
 		</>
 	);
 }

@@ -19,15 +19,14 @@ export const AppRoutes = () => {
 		<NavigationContainer>
 			<Stack.Navigator 
 				initialRouteName='home' 
+				screenLayout={({children}) => <SafeAreaView style={{flex: 1}}>{children}</SafeAreaView>} 
 				screenOptions={{
 					headerShown: false, 
 					contentStyle: {
 						backgroundColor: theme.colors.background,
 					},
 				}} 
-				screenLayout={(
-					{children}) => <SafeAreaView>{children}</SafeAreaView>
-				}
+				
 			>
 
 			<Stack.Screen name='home' component={HomePage} />
