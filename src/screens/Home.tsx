@@ -4,6 +4,7 @@ import { Button, Text, View } from "react-native";
 import { TNavigationScreenProps } from "../Routes";
 import { Header } from "../shared/components/Header";
 import { Footer } from "../shared/components/Footer";
+import { BaseInput } from "../shared/components/BaseInput";
 
 
 export const HomePage = () => {
@@ -18,7 +19,9 @@ export const HomePage = () => {
 			<View style={{ flex: 1 }} />
 
 			<Footer>
-				<Text style={{fontFamily: 'body'}}>HomePage</Text>
+				<BaseInput label='Nome' asButton onPress={() => navigation.navigate('setUsername')}>
+					<Text style={{fontFamily: 'extraBold'}}>Footer</Text>
+				</BaseInput>
 			</Footer>
 		</>
 	);
